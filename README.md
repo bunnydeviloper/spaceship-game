@@ -1,3 +1,5 @@
+# Build simple games with SVG graphics
+
 ## Check out my awesome spaceship game [here](https://bunnydeviloper.github.io/spaceship-game/)
 [credit: w3schools](https://www.w3schools.com/graphics/game_intro.asp)
 
