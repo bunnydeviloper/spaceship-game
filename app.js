@@ -13,20 +13,20 @@ const pickAvatar(id) => {
   avatar.addEventListener("click", startGame(id));
 };
 window.onload = function() {
-document.getElementById('spaceship').onclick = function() { startGame('spaceship.png'); };
-document.getElementById('mangocat').onclick = function() { startGame('catreading.jpg'); };
-document.getElementById('pusheen').onclick = function() { startGame('angrybird2.jpg'); };
+document.getElementById('spaceship').onclick = function() { startGame('img/spaceship.png'); };
+document.getElementById('mangocat').onclick = function() { startGame('img/catreading.jpg'); };
+document.getElementById('pusheen').onclick = function() { startGame('img/angrybird2.jpg'); };
 }
 */
 
 function startGame() {
-  myGamePiece = new component(40, 40, 'angrybird2.jpg', 10, 70, "image"); // use image
+  myGamePiece = new component(40, 40, 'img/angrybird2.jpg', 10, 70, "image"); // use image
   // myGamePiece = new component(40, 40, 'blue', 10, 70, "piece"); // use little square
 
   myScore = new component("20px", "Consolas", "black", 480, 40, "text");
-  myBackground = new component(699, 410, 'background.jpg', -5, 0, "background");
-  mySound = new sound("gunhit.mp3");
-  myMusic = new sound("candycrush.mp3", "backgroundMusic");
+  myBackground = new component(699, 410, 'img/background.jpg', -5, 0, "background");
+  mySound = new sound("song/gunhit.mp3");
+  myMusic = new sound("song/candycrush.mp3", "backgroundMusic");
   myMusic.play();
 
   myGameArea.start();
@@ -325,7 +325,7 @@ function updateGameArea() {
 
 // game control with buttons
 function move(direction) {
-  if (myGamePiece.type == "image") myGamePiece.image.src = "angrybird.png";
+  if (myGamePiece.type == "image") myGamePiece.image.src = "img/angrybird.png";
   if (direction == "up") {
     myGamePiece.speedY -= 2;
     accelerate(-0.1);
@@ -345,7 +345,7 @@ function move(direction) {
 
 function stopMove() {
   accelerate(0.02);
-  if (myGamePiece.type == "image") myGamePiece.image.src = "angrybird2.jpg";
+  if (myGamePiece.type == "image") myGamePiece.image.src = "img/angrybird2.jpg";
   myGamePiece.speedX = 0;
   myGamePiece.speedY = 0;
 }
